@@ -105,7 +105,7 @@ WHERE NOT EXISTS (SELECT 1 FROM category WHERE description = 'Cleaner' AND paren
 
 INSERT INTO category (description, parent_category_id) 
 SELECT 'Groceries', 2 
-WHERE NOT EXISTS (SELECT 1 FROM category WHERE descriptionFROM category WHERE description = 'Groceries' AND parent_category_id = 2);
+WHERE NOT EXISTS (SELECT 1 FROM category WHERE description = 'Groceries' AND parent_category_id = 2);
 
 INSERT INTO category (description, parent_category_id) 
 SELECT 'Costco', 2 
