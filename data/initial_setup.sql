@@ -165,5 +165,29 @@ INSERT INTO entry_user (first_name, last_name)
 SELECT 'Lewis', 'McLellan' 
 WHERE NOT EXISTS (SELECT 1 FROM entry_user WHERE first_name = 'Lewis' AND last_name = 'McLellan');
 
+--budget_duration TABLE
+INSERT INTO budget_duration (duration_code, description)
+VALUES ('B', 'Bi-weekly')
+ON CONFLICT (duration_code) DO NOTHING;
+
+INSERT INTO budget_duration (duration_code, description)
+VALUES ('W', 'Weekly')
+ON CONFLICT (duration_code) DO NOTHING;
+
+INSERT INTO budget_duration (duration_code, description)
+VALUES ('M', 'Monthly')
+ON CONFLICT (duration_code) DO NOTHING;
+
+INSERT INTO budget_duration (duration_code, description)
+VALUES ('S', 'Semi-monthly')
+ON CONFLICT (duration_code) DO NOTHING;
+
+INSERT INTO budget_duration (duration_code, description)
+VALUES ('A', 'Annually')
+ON CONFLICT (duration_code) DO NOTHING;
+
+INSERT INTO budget_duration (duration_code, description)
+VALUES ('Q', 'Quarterly')
+ON CONFLICT (duration_code) DO NOTHING;
 
 
